@@ -55,7 +55,7 @@ function parser(data, code) {
 		.replace(/[^`]?~((?:.|\n)*?)~/g, "<u>$1</u>");
 
 	//replace CODE with previously stocked code content
-	data = data.replace(/__CODE__/, function(){
+	data = data.replace(/__CODE__/g, function(){
 		return codesTag.shift();
 	});
 	return data;
