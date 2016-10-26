@@ -1,14 +1,5 @@
 $('document').ready(function() {
 	require(['composer', 'composer/controls'], function(composer, controls) {
-		composer.addButton('fa fa-strikethrough', function(textarea, selectionStart, selectionEnd) {
-			if(selectionStart === selectionEnd){
-				controls.insertIntoTextarea(textarea, '~~Insert Text Here~~');
-				controls.updateTextareaSelection(textarea, selectionStart + 2, selectionEnd + 18);
-			} else {
-				controls.wrapSelectionInTextareaWith(textarea, '~~','~~');
-				controls.updateTextareaSelection(textarea, selectionStart + 2, selectionEnd + 2);
-			}
-		});
 		composer.addButton('fa fa-underline', function(textarea, selectionStart, selectionEnd) {
 			if(selectionStart === selectionEnd){
 				controls.insertIntoTextarea(textarea, '~Insert Text Here~');
